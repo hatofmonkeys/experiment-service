@@ -6,6 +6,9 @@ import (
 	"net/http/httputil"
 	"net/url"
 	"os"
+	"strconv"
+
+	"gopkg.in/redis.v3"
 )
 
 const (
@@ -17,7 +20,6 @@ const (
 func main() {
 	log.SetOutput(os.Stdout)
 
-	//	http.HandleFunc("/stats", statsHandler)
 	http.Handle("/", newProxy())
 	log.Fatal(http.ListenAndServe(":"+getPort(), nil))
 }
@@ -32,7 +34,7 @@ func newProxy() http.Handler {
 				log.Fatalln(err.Error())
 			}
 
-			url, _ = Specimen(url, DEFAULT_RATIO)
+			url, _ = Specimen(url, ratio())
 			req.URL = url
 			req.Host = url.Host
 		},
@@ -46,4 +48,17 @@ func getPort() string {
 		port = DEFAULT_PORT
 	}
 	return port
+}
+
+func ratio() int {
+	client := redis.NewClient(&redis.Options{
+		Addr:     "xxxxxxxxxxxxx",
+		Password: "xxxxxxxxxxxxx", // no password set
+		DB:       0,               // use default DB
+	})
+
+	strRatio, _ := client.Get("ratio").Result()
+	intRatio, _ := strconv.Atoi(strRatio)
+
+	return intRatio
 }
