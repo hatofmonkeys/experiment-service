@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestRatelimitService(t *testing.T) {
+func TestExperimentService(t *testing.T) {
 	RegisterFailHandler(Fail)
 	RunSpecs(t, "Experiment Suite")
 }
