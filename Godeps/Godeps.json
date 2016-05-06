@@ -1,11 +1,7 @@
 {
-	"ImportPath": "github.com/cloudfoundry-samples/ratelimit-service",
+	"ImportPath": "github.com/hatofmonkeys/experiment-service",
 	"GoVersion": "go1.5.3",
 	"Deps": [
-		{
-			"ImportPath": "github.com/juju/ratelimit",
-			"Rev": "77ed1c8a01217656d2080ad51981f6e99adaa177"
-		},
 		{
 			"ImportPath": "github.com/onsi/ginkgo",
 			"Comment": "v1.1.0-41-g38caab9",

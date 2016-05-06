@@ -1,4 +1,4 @@
-package store_test
+package main_test
 
 import (
 	. "github.com/onsi/ginkgo"
@@ -7,7 +7,7 @@ import (
 	"testing"
 )
 
-func TestStore(t *testing.T) {
+func TestRatelimitService(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "Store Suite")
+	RunSpecs(t, "Experiment Suite")
 }
