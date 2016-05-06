@@ -1,16 +1,25 @@
 {
 	"ImportPath": "github.com/hatofmonkeys/experiment-service",
-	"GoVersion": "go1.5.3",
+	"GoVersion": "go1.5",
 	"Deps": [
 		{
 			"ImportPath": "github.com/onsi/ginkgo",
-			"Comment": "v1.1.0-41-g38caab9",
-			"Rev": "38caab951a9ff39f0e61294a1dbaaa074a39228b"
+			"Comment": "v1.1.0-42-gdbb5c6c",
+			"Rev": "dbb5c6caf33238b57facc1d975b1aaca6b90288c"
 		},
 		{
 			"ImportPath": "github.com/onsi/gomega",
-			"Comment": "v1.0-33-ge7b2cd9",
-			"Rev": "e7b2cd96b5633fbc5f0c221159a5c1e85323f770"
+			"Comment": "v1.0-39-gc853a76",
+			"Rev": "c853a76367c700fe446c27bc7e6fc8209ee4e0a1"
+		},
+		{
+			"ImportPath": "gopkg.in/bsm/ratelimit.v1",
+			"Rev": "db14e161995a5177acef654cb0dd785e8ee8bc22"
+		},
+		{
+			"ImportPath": "gopkg.in/redis.v3",
+			"Comment": "v3.6.2",
+			"Rev": "5183f8dcde9737db7583dbfa9881800dba26e3fa"
 		}
 	]
 }
